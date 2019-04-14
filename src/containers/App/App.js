@@ -34,8 +34,8 @@ class App extends Component {
     return (
       <div className="App">
         <div className="background-image"></div>
+        <div className="app-frame"></div>
         <div className="App-content">
-          <h1>Rotten Potatoes</h1>
           <Route exact path="/" component={Form} />
 
           <Route exact path="/locations" component={CardContainer} />
