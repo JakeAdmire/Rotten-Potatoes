@@ -68,6 +68,7 @@ export class CardContainer extends Component {
       if (!a || !b) return null;
       return a.distance - b.distance;
     });
+    console.log('sorted restaurants', restaurants);
     // lets display this fuckin' info!
   }
 
