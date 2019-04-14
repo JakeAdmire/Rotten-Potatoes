@@ -48,6 +48,23 @@ export class CardContainer extends Component {
     this.findDistances(restaurantArray);
   }
 
+  findDistances(restaurants) {
+    const { location } = this.props;
+    let start = { 
+      latitude: location.coords.lat, 
+      longitude: location.coords.lng 
+    };
+    const addedDistances = restaurants.map(restaurant => {
+      if (!restaurant.coordinates) return null;
+      let end = { latitude: restaurant.coordinates.latitude, longitude: restaurant.coordinates.longitude};
+      let miles =  haversine(start, end, {unit: 'mile'});
+      return {...restaurant, distance: miles };
+    })
+    this.sortByDistance(addedDistances);
+  }
+
+  
+
   render() {
     const { location, restaurants } = this.props;
     location && this.gatherRestaurants(restaurants);
