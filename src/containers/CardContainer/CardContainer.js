@@ -39,7 +39,13 @@ export class CardContainer extends Component {
       if (!restaurantsData[facilityname]) 
         restaurantsData = {...restaurantsData, [facilityname]: restaurantData};
     })
-    // this.convertObject(restaurantsData);
+    this.convertObject(restaurantsData);
+  }
+
+  convertObject(restaurants) {
+    let restaurantArray = [];
+    Object.values(restaurants).forEach(value => restaurantArray.push(value));
+    this.findDistances(restaurantArray);
   }
 
   render() {
