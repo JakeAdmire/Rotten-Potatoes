@@ -10,6 +10,20 @@ export class Form extends Component {
     this.state = { value: '' };
   }
 
+  componentDidMount() {
+    document.addEventListener('keydown', this.handleEnter); 
+  }
+
+  handleEnter = (event) => {
+    if (event.key !== 'Enter') return null;
+    // this.state.value && this.getLocation()
+  }
+
+  handleChange = (event) => {
+    const { value } = event.target;
+    this.setState({value});
+  }
+
   render() {
     const { value } = this.state;
     const placeholder='ex. 123 Fake Address, Denver, CO'
