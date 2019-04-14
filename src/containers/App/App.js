@@ -1,28 +1,57 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { connect } from 'react-redux';
+import { Route, Redirect } from 'react-router-dom';
+
+import { setRestaurants } from '../../actions';
+import Form from '../Form/Form';
+import CardContainer from '../CardContainer/CardContainer';
 
 class App extends Component {
+
+  componentDidMount() {
+    this.fetchRestaurants();
+  }
+
+  async fetchRestaurants() {
+    const url = 'https://data.colorado.gov/resource/d5e8-gubm.json';
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      this.gatherRestaurantNames(data);
+    } catch(error) {
+      console.log(error);
+    }
+  }
+
+  gatherRestaurantNames = (data) => {
+    const facilities = data.map(facility =>  facility.facilityname)
+    const flatFacilities = [...new Set(facilities)];
+    this.props.setRestaurants(flatFacilities);
+  }
+
   render() {
+    let redirect = this.props.redirect;
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <h1>Rotten Potatoes</h1>
+        <Route exact path="/" component={Form} />
+
+        <Route exact path="/locations" component={CardContainer} />
+
+        <Route exact path="/" render={() => (
+          redirect && <Redirect to={'/' + redirect} />
+        )} />
       </div>
     );
   }
 }
 
-export default App;
+export const mapStateToProps = (state) => ({
+  redirect: state.redirect
+})
+
+export const setDispatchToProps = (dispatch) => ({
+  setRestaurants: (restaurants) => dispatch(setRestaurants(restaurants)),
+})
+
+export default connect(mapStateToProps, setDispatchToProps)(App);
