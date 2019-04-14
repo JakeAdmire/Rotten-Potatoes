@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+import { setRestaurants } from '../../actions';
 
 class App extends Component {
 
@@ -32,4 +35,12 @@ class App extends Component {
   }
 }
 
-export default App;
+export const mapStateToProps = (state) => ({
+  redirect: state.redirect
+})
+
+export const setDispatchToProps = (dispatch) => ({
+  setRestaurants: (restaurants) => dispatch(setRestaurants(restaurants)),
+})
+
+export default connect(mapStateToProps, setDispatchToProps)(App);
