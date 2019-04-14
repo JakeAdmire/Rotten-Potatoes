@@ -63,7 +63,13 @@ export class CardContainer extends Component {
     this.sortByDistance(addedDistances);
   }
 
-  
+  sortByDistance(restaurants) {
+    restaurants.sort(function(a, b) {
+      if (!a || !b) return null;
+      return a.distance - b.distance;
+    });
+    // lets display this fuckin' info!
+  }
 
   render() {
     const { location, restaurants } = this.props;
