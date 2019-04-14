@@ -9,10 +9,37 @@ export class CardContainer extends Component {
     try {
       const response = await fetch(url);
       const data = await response.json();
-      // this.sortRestaurants(data, restaurants);
+      this.sortRestaurants(data, restaurants);
     } catch(error) {
       console.log(error);
     }
+  }
+
+  sortRestaurants(data, restaurants) {
+    let restaurantsData = {}
+    data.forEach(restaurant => {
+      const { city, facilityname, inspectiondate, inspectionscore, inspectiontype, location, location_address, state, zip, violation, violationpoints, violationstatus, violationtype } = restaurant;
+      const locationDetails = `${location_address}. ${state}, ${city}, ${zip}`;
+      const coordinates = location && { 
+        latitude: location.coordinates[1] , 
+        longitude: location.coordinates[0]
+      };
+      const restaurantData = {
+        address: locationDetails,
+        coordinates,
+        facilityname,
+        inspectiondate,
+        inspectionscore,
+        inspectiontype,
+        violation,
+        violationpoints,
+        violationstatus,
+        violationtype
+      };
+      if (!restaurantsData[facilityname]) 
+        restaurantsData = {...restaurantsData, [facilityname]: restaurantData};
+    })
+    // this.convertObject(restaurantsData);
   }
 
   render() {
