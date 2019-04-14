@@ -1,5 +1,4 @@
 .App {
-  font-family: 'Lobster', cursive;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -15,9 +14,19 @@
   filter: blur(5px) opacity(0.8);
 }
 
-.App-content {
+.app-frame {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   box-sizing: border-box;
   border: solid #404040 20px;
+  // z-index: 2;
+}
+
+.App-content {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
