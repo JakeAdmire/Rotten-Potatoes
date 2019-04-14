@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// import haversine from 'haversine';
+import haversine from 'haversine';
 
 export class CardContainer extends Component {
 
