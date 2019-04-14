@@ -16,12 +16,58 @@ export class Form extends Component {
 
   handleEnter = (event) => {
     if (event.key !== 'Enter') return null;
-    // this.state.value && this.getLocation()
+    this.state.value && this.getLocation()
   }
 
   handleChange = (event) => {
     const { value } = event.target;
     this.setState({value});
+  }
+
+  getLocation = async () => {
+    Geocode.setApiKey(geocodeKey);
+    const { value } = this.state;
+    try {
+      const response = await Geocode.fromAddress(value);
+      this.gatherLocationInfo(response.results[0])
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+
+  gatherLocationInfo = (result) => {
+    let location = {
+      name: result.formatted_address,
+      coords: result.geometry.location
+    };
+    this.props.setLocation(location);
+    this.props.setRedirect('locations');
+  }
+
+  handleClick = (event) => {
+    if ("geolocation" in navigator) {
+      console.log('finding position...'); // start loader here
+      navigator.geolocation.getCurrentPosition(
+        function(position) { 
+          const { latitude, longitude } = position.coords;
+          callFunction({latitude, longitude});
+        }
+      );
+      const callFunction = (position) => { this.getAddress(position); }
+    } else {
+      console.log('geolocation is not enabled on this browser');
+    }
+  }
+
+  getAddress = async (position) => {
+    Geocode.setApiKey(geocodeKey);
+    try {
+      const response = await Geocode.fromLatLng(position.latitude, position.longitude);
+      this.gatherLocationInfo(response.results[0])
+      console.log('...position found'); // end loader here
+    } catch (error) {
+      console.log(error.message);
+    }
   }
 
   render() {
