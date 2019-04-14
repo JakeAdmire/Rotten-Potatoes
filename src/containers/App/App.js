@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Route, Redirect } from 'react-router-dom';
 
 import { setRestaurants } from '../../actions';
+import Form from '../Form/Form';
+import CardContainer from '../CardContainer/CardContainer';
 
 class App extends Component {
 
@@ -23,13 +26,21 @@ class App extends Component {
   gatherRestaurantNames = (data) => {
     const facilities = data.map(facility =>  facility.facilityname)
     const flatFacilities = [...new Set(facilities)];
-    // this.props.setRestaurants(flatFacilities);
+    this.props.setRestaurants(flatFacilities);
   }
 
   render() {
+    let redirect = this.props.redirect;
     return (
       <div className="App">
         <h1>Rotten Potatoes</h1>
+        <Route exact path="/" component={Form} />
+
+        <Route exact path="/locations" component={CardContainer} />
+
+        <Route exact path="/" render={() => (
+          redirect && <Redirect to={'/' + redirect} />
+        )} />
       </div>
     );
   }
