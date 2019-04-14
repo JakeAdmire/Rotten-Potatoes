@@ -33,14 +33,17 @@ class App extends Component {
     let redirect = this.props.redirect;
     return (
       <div className="App">
-        <h1>Rotten Potatoes</h1>
-        <Route exact path="/" component={Form} />
+        <div className="background-image"></div>
+        <div className="App-content">
+          <h1>Rotten Potatoes</h1>
+          <Route exact path="/" component={Form} />
 
-        <Route exact path="/locations" component={CardContainer} />
+          <Route exact path="/locations" component={CardContainer} />
 
-        <Route exact path="/" render={() => (
-          redirect && <Redirect to={'/' + redirect} />
-        )} />
+          <Route exact path="/" render={() => (
+            redirect && <Redirect to={'/' + redirect} />
+          )} />
+        </div>
       </div>
     );
   }
