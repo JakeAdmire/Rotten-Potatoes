@@ -75,14 +75,15 @@ export class Form extends Component {
     const placeholder='ex. 123 Fake Address, Denver, CO'
     return (
       <div className="Form">
-        <label htmlFor="address">Enter an address</label>
+        <h1>Rotten Potatoes</h1>
+        <label htmlFor="address">Enter an address:</label>
         <input  value={value} 
                 onChange={this.handleChange} 
                 id="address" 
                 type="text" 
                 placeholder={placeholder}>
         </input>
-        <h3>FOR</h3>
+        <h3>OR</h3>
         <button onClick={this.handleClick}>Find My Location</button>
       </div>
     )
