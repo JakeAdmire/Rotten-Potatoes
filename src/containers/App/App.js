@@ -11,10 +11,16 @@ class App extends Component {
     try {
       const response = await fetch(url);
       const data = await response.json();
-      // this.gatherRestaurantNames(data);
+      this.gatherRestaurantNames(data);
     } catch(error) {
       console.log(error);
     }
+  }
+
+  gatherRestaurantNames = (data) => {
+    const facilities = data.map(facility =>  facility.facilityname)
+    const flatFacilities = [...new Set(facilities)];
+    // this.props.setRestaurants(flatFacilities);
   }
 
   render() {
