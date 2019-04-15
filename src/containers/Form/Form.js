@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Geocode from "react-geocode";
 import { connect } from 'react-redux';
-import { setRestaurants, setLocation, setRedirect } from '../../actions';
+import { setRestaurants, setLocation, setRedirect, isLoading } from '../../actions';
 import { geocodeKey } from '../../keys';
 
 export class Form extends Component {
@@ -25,6 +25,7 @@ export class Form extends Component {
   }
 
   getLocation = async () => {
+    this.props.isLoading(true);
     Geocode.setApiKey(geocodeKey);
     const { value } = this.state;
     try {
@@ -46,7 +47,7 @@ export class Form extends Component {
 
   handleClick = (event) => {
     if ("geolocation" in navigator) {
-      console.log('finding position...'); // start loader here
+      this.props.isLoading(true);
       navigator.geolocation.getCurrentPosition(
         function(position) { 
           const { latitude, longitude } = position.coords;
@@ -64,7 +65,6 @@ export class Form extends Component {
     try {
       const response = await Geocode.fromLatLng(position.latitude, position.longitude);
       this.gatherLocationInfo(response.results[0])
-      console.log('...position found'); // end loader here
     } catch (error) {
       console.log(error.message);
     }
@@ -72,7 +72,10 @@ export class Form extends Component {
 
   render() {
     const { value } = this.state;
-    const placeholder='ex. 123 Fake Address, Denver, CO'
+    const placeholder='ex. 123 Fake Address, Denver, CO';
+
+    // let buttonText = this.props.loading ? 'loading..' : 'Find My Location';
+    let loadingText = this.props.loading ? 'loading...' : null;
     return (
       <div className="Form">
         <h1>Rotten Potatoes</h1>
@@ -85,15 +88,21 @@ export class Form extends Component {
         </input>
         <h3>OR</h3>
         <button onClick={this.handleClick}>Find My Location</button>
+        <p>{loadingText}</p>
       </div>
     )
   }
 }
 
-export const setDispatchToProps = (dispatch) => ({
+export const mapStateToProps = (state) => ({
+  loading: state.loading
+});
+
+export const mapDispatchToProps = (dispatch) => ({
   setRestaurants: (restaurants) => dispatch(setRestaurants(restaurants)),
   setLocation: (location) => dispatch(setLocation(location)),
-  setRedirect: (redirect) => dispatch(setRedirect(redirect))
-})
+  setRedirect: (redirect) => dispatch(setRedirect(redirect)),
+  isLoading: (boolean) => dispatch(isLoading(boolean)),
+});
 
-export default connect(null, setDispatchToProps)(Form);
+export default connect(mapStateToProps, mapDispatchToProps)(Form);
