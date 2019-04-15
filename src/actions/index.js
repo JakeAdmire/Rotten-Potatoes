@@ -12,3 +12,8 @@ export const setRedirect = (redirect) => ({
   type: 'SET_REDIRECT',
   redirect
 })
+
+export const isLoading = (boolean) => ({
+  type: 'IS_LOADING',
+  boolean
+})
