@@ -1,0 +1,18 @@
+.CardContainer {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  /* padding-top: 50px; */
+  /* margin-bottom: 50px; */
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(590px, 1fr));
+    position: absolute;
+    top: 165px; bottom: 20px;
+    left: 20px; right: 20px;
+    overflow: scroll;
+    // padding-bottom: 20px;
+    padding: 10px 0 20px;
+  }
+}

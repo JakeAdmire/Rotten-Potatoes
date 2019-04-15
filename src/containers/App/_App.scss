@@ -5,7 +5,7 @@
 }
 
 .background-image {
-  position: absolute;
+  position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
   z-index: -1;
   background-image: url(/static/media/background.a9a75cdd.jpg);
@@ -15,7 +15,7 @@
 }
 
 .app-frame {
-  position: absolute;
+  position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
   box-sizing: border-box;
   border: solid #404040 20px;

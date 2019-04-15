@@ -2,7 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import haversine from 'haversine';
 
+import Card from '../Card/Card';
+import Header from '../Header/Header';
+import { isLoading } from '../../actions';
+
 export class CardContainer extends Component {
+  constructor() {
+    super();
+    this.state = { cards: [] };
+  }
 
   gatherRestaurants  = async (restaurants) => {
     const url = 'https://data.colorado.gov/resource/d5e8-gubm.json';
@@ -19,7 +27,7 @@ export class CardContainer extends Component {
     let restaurantsData = {}
     data.forEach(restaurant => {
       const { city, facilityname, inspectiondate, inspectionscore, inspectiontype, location, location_address, state, zip, violation, violationpoints, violationstatus, violationtype } = restaurant;
-      const locationDetails = `${location_address}. ${state}, ${city}, ${zip}`;
+      const locationDetails = `${location_address}. ${city}, ${state}, ${zip}`;
       const coordinates = location && { 
         latitude: location.coordinates[1] , 
         longitude: location.coordinates[0]
@@ -63,21 +71,28 @@ export class CardContainer extends Component {
     this.sortByDistance(addedDistances);
   }
 
-  sortByDistance(restaurants) {
+  sortByDistance = (restaurants) => {
     restaurants.sort(function(a, b) {
       if (!a || !b) return null;
       return a.distance - b.distance;
     });
-    console.log('sorted restaurants', restaurants);
-    // lets display this fuckin' info!
+
+    restaurants = restaurants.filter(restaurant => restaurant !== null);
+
+    this.setState({cards: restaurants});
+    this.props.isLoading(false);
   }
 
   render() {
-    const { location, restaurants } = this.props;
-    location && this.gatherRestaurants(restaurants);
+    const { restaurants, loading } = this.props;
+    const { cards } = this.state;
+    loading && this.gatherRestaurants(restaurants);
     return (
-      <div>
-        CARDCONTAINER
+      <div className="CardContainer">
+        <Header />
+        <div className="card-grid">
+          { cards && cards.map(card => <Card key={card.facilityname} {...card} />) }
+        </div>
       </div>
     )
   }
@@ -85,7 +100,12 @@ export class CardContainer extends Component {
 
 export const mapStateToProps = (state) => ({
   location: state.location,
-  restaurants: state.restaurants
+  restaurants: state.restaurants,
+  loading: state.loading
 });
 
-export default connect(mapStateToProps, null)(CardContainer);
+export const mapDispatchToProps = (dispatch) => ({
+  isLoading: (boolean) => dispatch(isLoading(boolean)),
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(CardContainer);
