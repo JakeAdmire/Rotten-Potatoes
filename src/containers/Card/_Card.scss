@@ -1,0 +1,65 @@
+.Card {
+  background: #4D4D4D;
+  color: white;
+  margin: 10px auto;
+  width: 580px; height: 150px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 165px 66px;
+
+  .card-text {
+    padding: 10px;
+    position: relative;
+
+    h3 { 
+      font-family: 'Lobster', cursive; 
+      width: 100%;
+      margin: 0;
+      font-size: 30px;
+      text-decoration: underline;
+    }
+
+    p { 
+      color: #BFBFBF; 
+      font-size: 20px;
+      margin: 10px 0 0;
+    }
+
+    p:nth-child(2) { width: 325px; }
+
+    p:nth-child(3) {
+      position: absolute;
+      bottom: 10px; right: 0;
+      font-size: 14px;
+    }
+  }
+
+  .card-percentage {
+    height: 100%;
+    background: #BFBFBF;
+    box-sizing: border-box;
+    border: solid #4d4d4d 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+
+    p { margin: 0; }
+
+    p:nth-child(2) {
+      font-size: 55px;
+    }
+  }
+
+  .card-favorite {
+    height: 100%;
+    background: #666666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    font-weight: bold;
+  }
+}
