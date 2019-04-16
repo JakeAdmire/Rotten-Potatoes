@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Card should match the snapshot 1`] = `
+exports[`Card buildAddress should return null if props is empty 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Card />,
@@ -300,6 +300,1082 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": null,
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "+",
+            "className": "card-favorite",
+          },
+          "ref": null,
+          "rendered": "+",
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;
+
+exports[`Card buildDistance should return null if props is empty 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="card-text"
+        >
+          <h3 />
+          <p />
+          <p />
+        </div>,
+        <div
+          className="card-percentage"
+        >
+          <p>
+            inspection score:
+          </p>
+          <p>
+            undefined%
+          </p>
+          <p />
+        </div>,
+        <div
+          className="card-favorite"
+        >
+          +
+        </div>,
+      ],
+      "className": "Card",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h3 />,
+            <p />,
+            <p />,
+          ],
+          "className": "card-text",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": null,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": null,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": null,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "p",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p>
+              inspection score:
+            </p>,
+            <p>
+              undefined%
+            </p>,
+            <p />,
+          ],
+          "className": "card-percentage",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "inspection score:",
+            },
+            "ref": null,
+            "rendered": "inspection score:",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "undefined%",
+            },
+            "ref": null,
+            "rendered": "undefined%",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "p",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "+",
+          "className": "card-favorite",
+        },
+        "ref": null,
+        "rendered": "+",
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="card-text"
+          >
+            <h3 />
+            <p />
+            <p />
+          </div>,
+          <div
+            className="card-percentage"
+          >
+            <p>
+              inspection score:
+            </p>
+            <p>
+              undefined%
+            </p>
+            <p />
+          </div>,
+          <div
+            className="card-favorite"
+          >
+            +
+          </div>,
+        ],
+        "className": "Card",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3 />,
+              <p />,
+              <p />,
+            ],
+            "className": "card-text",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": null,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": null,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": null,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p>
+                inspection score:
+              </p>,
+              <p>
+                undefined%
+              </p>,
+              <p />,
+            ],
+            "className": "card-percentage",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "inspection score:",
+              },
+              "ref": null,
+              "rendered": "inspection score:",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "undefined%",
+              },
+              "ref": null,
+              "rendered": "undefined%",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "+",
+            "className": "card-favorite",
+          },
+          "ref": null,
+          "rendered": "+",
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;
+
+exports[`Card buildTitle should return null if props is empty 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="card-text"
+        >
+          <h3 />
+          <p />
+          <p />
+        </div>,
+        <div
+          className="card-percentage"
+        >
+          <p>
+            inspection score:
+          </p>
+          <p>
+            undefined%
+          </p>
+          <p />
+        </div>,
+        <div
+          className="card-favorite"
+        >
+          +
+        </div>,
+      ],
+      "className": "Card",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h3 />,
+            <p />,
+            <p />,
+          ],
+          "className": "card-text",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": null,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": null,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": null,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "p",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p>
+              inspection score:
+            </p>,
+            <p>
+              undefined%
+            </p>,
+            <p />,
+          ],
+          "className": "card-percentage",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "inspection score:",
+            },
+            "ref": null,
+            "rendered": "inspection score:",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "undefined%",
+            },
+            "ref": null,
+            "rendered": "undefined%",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "p",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "+",
+          "className": "card-favorite",
+        },
+        "ref": null,
+        "rendered": "+",
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="card-text"
+          >
+            <h3 />
+            <p />
+            <p />
+          </div>,
+          <div
+            className="card-percentage"
+          >
+            <p>
+              inspection score:
+            </p>
+            <p>
+              undefined%
+            </p>
+            <p />
+          </div>,
+          <div
+            className="card-favorite"
+          >
+            +
+          </div>,
+        ],
+        "className": "Card",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3 />,
+              <p />,
+              <p />,
+            ],
+            "className": "card-text",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": null,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": null,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": null,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p>
+                inspection score:
+              </p>,
+              <p>
+                undefined%
+              </p>,
+              <p />,
+            ],
+            "className": "card-percentage",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "inspection score:",
+              },
+              "ref": null,
+              "rendered": "inspection score:",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "undefined%",
+              },
+              "ref": null,
+              "rendered": "undefined%",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "+",
+            "className": "card-favorite",
+          },
+          "ref": null,
+          "rendered": "+",
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;
+
+exports[`Card should match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    address="123 Street St. Denver, CO"
+    facilityname="Taco Bell"
+    inspectionscore={25}
+    violationtype="critical"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="card-text"
+        >
+          <h3>
+            Taco Bell
+          </h3>
+          <p>
+            123 Street St. DENVER, Co
+          </p>
+          <p />
+        </div>,
+        <div
+          className="card-percentage"
+        >
+          <p>
+            inspection score:
+          </p>
+          <p>
+            25%
+          </p>
+          <p>
+            critical
+          </p>
+        </div>,
+        <div
+          className="card-favorite"
+        >
+          +
+        </div>,
+      ],
+      "className": "Card",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h3>
+              Taco Bell
+            </h3>,
+            <p>
+              123 Street St. DENVER, Co
+            </p>,
+            <p />,
+          ],
+          "className": "card-text",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Taco Bell",
+            },
+            "ref": null,
+            "rendered": "Taco Bell",
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "123 Street St. DENVER, Co",
+            },
+            "ref": null,
+            "rendered": "123 Street St. DENVER, Co",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": null,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "p",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p>
+              inspection score:
+            </p>,
+            <p>
+              25%
+            </p>,
+            <p>
+              critical
+            </p>,
+          ],
+          "className": "card-percentage",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "inspection score:",
+            },
+            "ref": null,
+            "rendered": "inspection score:",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "25%",
+            },
+            "ref": null,
+            "rendered": "25%",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "critical",
+            },
+            "ref": null,
+            "rendered": "critical",
+            "type": "p",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "+",
+          "className": "card-favorite",
+        },
+        "ref": null,
+        "rendered": "+",
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="card-text"
+          >
+            <h3>
+              Taco Bell
+            </h3>
+            <p>
+              123 Street St. DENVER, Co
+            </p>
+            <p />
+          </div>,
+          <div
+            className="card-percentage"
+          >
+            <p>
+              inspection score:
+            </p>
+            <p>
+              25%
+            </p>
+            <p>
+              critical
+            </p>
+          </div>,
+          <div
+            className="card-favorite"
+          >
+            +
+          </div>,
+        ],
+        "className": "Card",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3>
+                Taco Bell
+              </h3>,
+              <p>
+                123 Street St. DENVER, Co
+              </p>,
+              <p />,
+            ],
+            "className": "card-text",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Taco Bell",
+              },
+              "ref": null,
+              "rendered": "Taco Bell",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "123 Street St. DENVER, Co",
+              },
+              "ref": null,
+              "rendered": "123 Street St. DENVER, Co",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": null,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p>
+                inspection score:
+              </p>,
+              <p>
+                25%
+              </p>,
+              <p>
+                critical
+              </p>,
+            ],
+            "className": "card-percentage",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "inspection score:",
+              },
+              "ref": null,
+              "rendered": "inspection score:",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "25%",
+              },
+              "ref": null,
+              "rendered": "25%",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "critical",
+              },
+              "ref": null,
+              "rendered": "critical",
               "type": "p",
             },
           ],

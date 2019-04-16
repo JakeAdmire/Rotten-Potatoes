@@ -87,7 +87,7 @@ export class Form extends Component {
                 placeholder={placeholder}>
         </input>
         <h3>OR</h3>
-        <button onClick={this.handleClick}>Find My Location</button>
+        <button id="test" onClick={this.handleClick}>Find My Location</button>
         <p>{loadingText}</p>
       </div>
     )

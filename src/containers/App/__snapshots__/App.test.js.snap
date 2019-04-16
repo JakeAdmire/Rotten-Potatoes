@@ -3,7 +3,10 @@
 exports[`App should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <App />,
+  Symbol(enzyme.__unrendered__): <App
+    fetchRestaurants={[MockFunction]}
+    setRestaurants={[MockFunction]}
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "checkPropTypes": [Function],

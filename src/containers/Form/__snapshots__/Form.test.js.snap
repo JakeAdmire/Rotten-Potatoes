@@ -3,7 +3,13 @@
 exports[`Form should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Form />,
+  Symbol(enzyme.__unrendered__): <Form
+    getLocation={[MockFunction]}
+    handleClick={[MockFunction]}
+    handleEnter={[MockFunction]}
+    setLocation={[MockFunction]}
+    setRedirect={[MockFunction]}
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "checkPropTypes": [Function],
@@ -38,6 +44,7 @@ ShallowWrapper {
           OR
         </h3>,
         <button
+          id="test"
           onClick={[Function]}
         >
           Find My Location
@@ -103,6 +110,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Find My Location",
+          "id": "test",
           "onClick": [Function],
         },
         "ref": null,
@@ -149,6 +157,7 @@ ShallowWrapper {
             OR
           </h3>,
           <button
+            id="test"
             onClick={[Function]}
           >
             Find My Location
@@ -214,6 +223,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Find My Location",
+            "id": "test",
             "onClick": [Function],
           },
           "ref": null,
