@@ -7,15 +7,34 @@ import { setRestaurants } from '../../actions';
 describe('App', () => {
 
   let wrapper;
+  let mockSetRestaurants = jest.fn()
+  let mockFetchRestaurants = jest.fn()
 
   beforeEach(() => {
     wrapper = shallow(
-      <App />
+      <App  setRestaurants={mockSetRestaurants}
+            fetchRestaurants={mockFetchRestaurants} />
     )
   })
 
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
+  })
+
+  it('should invoke the fetchRestaurants function on componentDidMount', () => {
+    const instance = wrapper.instance();
+    jest.spyOn(instance, 'fetchRestaurants')
+    wrapper.instance().componentDidMount();
+    expect(instance.fetchRestaurants).toBeCalled();
+  })
+
+  it('should dispatch setRestaurants when gatherRestaurantNames is called', () => {
+    let mockData = [
+      { facilityname: 'East Moon Bistro' },
+      { facilityname: 'Taco Johns' },
+    ]
+    wrapper.instance().gatherRestaurantNames(mockData);
+    expect(mockSetRestaurants).toHaveBeenCalled();
   })
 
   describe('mapStateToProps', () => {
