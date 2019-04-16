@@ -7,15 +7,21 @@ import { setRedirect } from '../../actions';
 describe('Header', () => {
 
   let wrapper;
+  let mockSetRedirect = jest.fn();
 
   beforeEach(() => {
     wrapper = shallow(
-      <Header />
+      <Header setRedirect={mockSetRedirect} />
     )
   })
 
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
+  })
+
+  it('should dispatch setRedirect when the redirect method is called', () => {
+    wrapper.find('button').simulate('click');
+    expect(mockSetRedirect).toHaveBeenCalledWith('');
   })
 
 })
