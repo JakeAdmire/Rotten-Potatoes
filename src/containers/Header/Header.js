@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 
 import { setRedirect } from '../../actions';
 
-const Header = (props) => {
+export const Header = (props) => {
 
   const redirect = () => {
     props.setRedirect('');
   }
-  // console.log(props.location.name);
+
   return (
     <div className="Header">
       <div className="title">

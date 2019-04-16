@@ -1,16 +1,16 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { App, mapStateToProps, mapDispatchToProps } from './App';
-import { setRestaurants } from '../../actions';
+import { CardContainer, mapStateToProps, mapDispatchToProps } from './CardContainer';
+import { isLoading } from '../../actions';
 
-describe('App', () => {
+describe('CardContainer', () => {
 
   let wrapper;
 
   beforeEach(() => {
     wrapper = shallow(
-      <App />
+      <CardContainer />
     )
   })
 
@@ -21,8 +21,12 @@ describe('App', () => {
   describe('mapStateToProps', () => {
 
     it('should return a props object', () => {
-      let mockState = { redirect: false };
-      let results = mapStateToProps(mockState);
+      let mockState = {
+        location: {},
+        restaurants: [],
+        loading: false
+      }
+      const results = mapStateToProps(mockState);
       expect(results).toEqual(mockState);
     })
 
@@ -30,14 +34,14 @@ describe('App', () => {
 
   describe('mapDispatchToProps', () => {
 
-    it('should dispatch setRestaurants when its prop is called', () => {
-      let mockRestaurants = [{}, {}];
+    it('should dispatch isLoading when its prop is called', () => {
       const mockDispatch = jest.fn();
-      const actionToDispatch = setRestaurants(mockRestaurants);
+      let mockBoolean = false;
+      const actionToDispatch = isLoading(mockBoolean);
       const mappedProps = mapDispatchToProps(mockDispatch);
-      mappedProps.setRestaurants(mockRestaurants);
+      mappedProps.isLoading(mockBoolean);
       expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
-    })  
+    })
 
   })
 
