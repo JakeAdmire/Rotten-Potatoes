@@ -6,7 +6,7 @@ import { setRestaurants } from '../../actions';
 import Form from '../Form/Form';
 import CardContainer from '../CardContainer/CardContainer';
 
-class App extends Component {
+export class App extends Component {
 
   componentDidMount() {
     this.fetchRestaurants();
@@ -53,8 +53,8 @@ export const mapStateToProps = (state) => ({
   redirect: state.redirect
 })
 
-export const setDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   setRestaurants: (restaurants) => dispatch(setRestaurants(restaurants)),
 })
 
-export default connect(mapStateToProps, setDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
