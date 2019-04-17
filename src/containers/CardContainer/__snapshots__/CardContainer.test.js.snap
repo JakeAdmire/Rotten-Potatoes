@@ -5,6 +5,22 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <CardContainer
     isLoading={[MockFunction]}
+    loading={false}
+    location={
+      Object {
+        "coords": Object {
+          "lat": 40.5491556,
+          "lng": -105.0322899,
+        },
+        "name": "2821 Willow Tree Ln, Fort Collins, CO 80525, USA",
+      }
+    }
+    restaurants={
+      Array [
+        "TACO BELL",
+        "MCDONALDS",
+      ]
+    }
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],

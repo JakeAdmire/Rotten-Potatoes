@@ -1,4 +1,5 @@
 import { restaurantsReducer } from '../restaurantsReducer';
+import shortid from 'shortid';
 
 describe('restaurantsReducer', () => {
 
@@ -13,9 +14,17 @@ describe('restaurantsReducer', () => {
     expect(results).toEqual(mockState);
   })
 
-  it('should return action.restaurants if case is "SET_RESTAURANTS"', () => {
+  it('should return restaurant names and ids if case is "SET_RESTAURANTS"', () => {
+    shortid.generate = jest.fn().mockImplementation(() => '43');
+
     const results = restaurantsReducer(mockState, mockAction);
-    expect(results).toEqual(mockAction.restaurants);
+
+    const expected = [
+      {"id": '43', "name": {}}, 
+      {"id": '43', "name": {}}
+    ];
+
+    expect(results).toEqual(expected);
   })
 
 })

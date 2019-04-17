@@ -4,7 +4,6 @@ exports[`App should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <App
-    fetchRestaurants={[MockFunction]}
     setRestaurants={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -24,6 +23,11 @@ ShallowWrapper {
       "children": Array [
         <div
           className="background-image"
+          style={
+            Object {
+              "backgroundImage": "url(background.jpg)",
+            }
+          }
         />,
         <div
           className="app-frame"
@@ -60,8 +64,7 @@ ShallowWrapper {
             path="/locations"
           />
           <Route
-            exact={true}
-            path="/"
+            path="/locations/:id"
             render={[Function]}
           />
         </div>,
@@ -76,6 +79,9 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "className": "background-image",
+          "style": Object {
+            "backgroundImage": "url(background.jpg)",
+          },
         },
         "ref": null,
         "rendered": null,
@@ -127,8 +133,7 @@ ShallowWrapper {
               path="/locations"
             />,
             <Route
-              exact={true}
-              path="/"
+              path="/locations/:id"
               render={[Function]}
             />,
           ],
@@ -181,8 +186,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "exact": true,
-              "path": "/",
+              "path": "/locations/:id",
               "render": [Function],
             },
             "ref": null,
@@ -204,6 +208,11 @@ ShallowWrapper {
         "children": Array [
           <div
             className="background-image"
+            style={
+              Object {
+                "backgroundImage": "url(background.jpg)",
+              }
+            }
           />,
           <div
             className="app-frame"
@@ -240,8 +249,7 @@ ShallowWrapper {
               path="/locations"
             />
             <Route
-              exact={true}
-              path="/"
+              path="/locations/:id"
               render={[Function]}
             />
           </div>,
@@ -256,6 +264,9 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "className": "background-image",
+            "style": Object {
+              "backgroundImage": "url(background.jpg)",
+            },
           },
           "ref": null,
           "rendered": null,
@@ -307,8 +318,7 @@ ShallowWrapper {
                 path="/locations"
               />,
               <Route
-                exact={true}
-                path="/"
+                path="/locations/:id"
                 render={[Function]}
               />,
             ],
@@ -361,8 +371,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "exact": true,
-                "path": "/",
+                "path": "/locations/:id",
                 "render": [Function],
               },
               "ref": null,

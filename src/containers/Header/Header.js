@@ -1,14 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
-import { setRedirect } from '../../actions';
 import { NavLink } from 'react-router-dom';
 
 export const Header = (props) => {
-
-  const redirect = () => {
-    props.setRedirect('');
-  }
 
   return (
     <div className="Header">
@@ -28,8 +22,4 @@ export const mapStateToProps = (state) => ({
   location: state.location
 })
 
-export const mapDispatchToProps = (dispatch) => ({
-  setRedirect: (redirect) => dispatch(setRedirect(redirect)), 
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default connect(mapStateToProps, null)(Header);

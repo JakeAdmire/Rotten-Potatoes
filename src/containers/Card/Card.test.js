@@ -7,10 +7,13 @@ describe('Card', () => {
 
   let wrapper;
   const mockProps = {
-    facilityname: 'Taco Bell',
-    address: '123 Street St. Denver, CO',
+    name: 'TACO BELL',
+    address: '123 STREET ST. DENVER, CO',
+    distance: 23.2113,
+    id: 1,
     inspectionscore: 25,
-    violationtype: 'critical'
+    violationtype: 'critical',
+    correctPlaces: [{}, {}, {}]
   }
 
   beforeEach(() => {
@@ -23,22 +26,19 @@ describe('Card', () => {
     expect(wrapper).toMatchSnapshot();
   })
 
-  it('buildTitle should return null if props is empty', () => {
-    wrapper = shallow( <Card /> )
-    wrapper.instance().buildTitle();
-    expect(wrapper).toMatchSnapshot();
+  it('should return the proper value when buildTitle is invoked', () => {
+    let buildTitle = wrapper.instance().buildTitle(mockProps.name);
+    expect(buildTitle).toEqual("Taco Bell");
   })
 
-  it('buildAddress should return null if props is empty', () => {
-    wrapper = shallow( <Card /> )
-    wrapper.instance().buildAddress();
-    expect(wrapper).toMatchSnapshot();
+  it('should return the proper value when buildDistance is invoked', () => {
+    let buildDistance = wrapper.instance().buildDistance(mockProps.distance);
+    expect(buildDistance).toEqual("23.2m away");
   })
 
-  it('buildDistance should return null if props is empty', () => {
-    wrapper = shallow( <Card /> )
-    wrapper.instance().buildDistance();
-    expect(wrapper).toMatchSnapshot();
+  it('should return the proper value when buildAddress is invoked', () => {
+    let buildAddress = wrapper.instance().buildAddress(mockProps.address);
+    expect(buildAddress).toEqual("123 Street St. DENVER, Co");
   })
   
 })

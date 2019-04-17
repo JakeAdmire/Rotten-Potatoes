@@ -8,10 +8,19 @@ describe('CardContainer', () => {
 
   let wrapper;
   let mockIsLoading = jest.fn();
+  let mockProps = {
+    loading: false,
+    location: {
+      coords: {lat: 40.5491556, lng: -105.0322899},
+      name: "2821 Willow Tree Ln, Fort Collins, CO 80525, USA"
+    },
+    restaurants: ['TACO BELL', 'MCDONALDS']
+  }
 
   beforeEach(() => {
     wrapper = shallow(
-      <CardContainer  isLoading={mockIsLoading}/>
+      <CardContainer  isLoading={mockIsLoading}
+                      {...mockProps} />
     )
   })
 
@@ -24,15 +33,20 @@ describe('CardContainer', () => {
     expect(wrapper.state()).toEqual(mockState);
   })
 
-  it.skip('should call sortRestaurants when gatherRestaurants is invoked', () => {
-    let mockRestaurants = [
-      { distance: 13.2131231 },
-      { distance: 15.2341134 } 
-    ];
-    let instance = wrapper.instance();
-    jest.spyOn(instance, 'sortRestaurants');
-    wrapper.instance().gatherRestaurants(mockRestaurants);
-    expect(instance.sortRestaurants).toBeCalled();
+  it('should call fetchRestaurants when it has the correct props', () => {
+    const mockSpy = jest.spyOn(wrapper.instance(), 'fetchRestaurants');
+    wrapper.update();
+
+    wrapper.setState({cards: []});
+    expect(mockSpy).toBeCalled()
+  })
+
+  it.skip('should call gatherRestaurantData when fetchRestaurants is invoked', () => {
+    const mockSpy = jest.spyOn(wrapper.instance(), 'gatherRestaurantData');
+    wrapper.update();
+
+    wrapper.instance().fetchRestaurants();
+    expect(mockSpy).toBeCalled();
   })
 
   it('should set state when sortByDistance is called', () => {
