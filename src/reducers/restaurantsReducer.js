@@ -1,4 +1,3 @@
-// const shortid = require('shortid');
 import shortid from 'shortid';
 
 export const restaurantsReducer = (state = [], action) => {
