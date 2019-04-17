@@ -32,16 +32,16 @@ describe('setLocation', () => {
 
 })
 
-describe('setRedirect', () => {
+describe('setCard', () => {
 
-  let mockType = 'SET_REDIRECT';
-  let mockRedirect = '';
+  let mockType = 'SET_CARD';
+  let mockCard = {};
 
-  it('should return a type of "SET_REDIRECT" and a restaurants array', () => {
-    const results = creators.setRedirect(mockRedirect);
+  it('should return a type of "SET_CARD" and a restaurants array', () => {
+    const results = creators.setCard(mockCard);
     const expected = { 
       type: mockType, 
-      redirect: mockRedirect 
+      card: mockCard 
     };
     expect(results).toEqual(expected);
   })
