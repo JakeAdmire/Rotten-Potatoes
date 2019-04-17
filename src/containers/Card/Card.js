@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import { setCard } from '../../actions';
+import { connect } from 'react-redux';
+
 export class Card extends Component {
 
   buildTitle = (name) => {
@@ -31,6 +34,10 @@ export class Card extends Component {
     return splitDistance[0] + '.' + decimal + 'm away';
   }
 
+  handleClick = () => {
+    this.props.setCard(this.props);
+  }
+
   render() {
     const { name, address, distance, id } = this.props;
     const { inspectionscore, violationtype } = this.props.correctPlaces[0];
@@ -42,7 +49,7 @@ export class Card extends Component {
     return (
       <div className="Card">
         <div className="card-text">
-          <Link to={`/locations/${id}`}>{headerText}</Link>
+          <Link to={`/locations/${id}`} onClick={this.handleClick}>{headerText}</Link>
           <p>{addressText}</p>
           <p>{distanceText}</p>
         </div>
@@ -59,4 +66,8 @@ export class Card extends Component {
   }
 }
 
-export default Card;
+export const mapDispatchToProps = (dispatch) => ({
+  setCard: (card) => dispatch(setCard(card))
+})
+
+export default connect(null, mapDispatchToProps)(Card);

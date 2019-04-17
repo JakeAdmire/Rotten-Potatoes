@@ -37,7 +37,7 @@ export class App extends Component {
           <Route exact path="/" component={Form} />
           <Route exact path="/locations" component={CardContainer} />
           <Route path='/locations/:id' render={({ match }) => {
-            return ( <div>New Route!</div> ) }} 
+            return <Info {...this.props.card} /> }} 
           />
         </div>
       </div>
@@ -45,8 +45,12 @@ export class App extends Component {
   }
 }
 
+export const mapStateToProps = (state) => ({
+  card: state.card
+})
+
 export const mapDispatchToProps = (dispatch) => ({
   setRestaurants: (restaurants) => dispatch(setRestaurants(restaurants)),
 })
 
-export default connect(null, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
