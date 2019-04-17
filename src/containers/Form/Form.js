@@ -62,7 +62,7 @@ export class Form extends Component {
         this.getAddress(position.coords);
       })
     } else {
-      console.log('geolocation is not enabled/supported in this browser');
+      return 'geolocation is not enabled/supported in this browser';
     }
   }
 
@@ -70,9 +70,10 @@ export class Form extends Component {
     Geocode.setApiKey(geocodeKey);
     try {
       const response = await Geocode.fromLatLng(position.latitude, position.longitude);
-      this.gatherLocationInfo(response.results[0])
+      this.gatherLocationInfo(response.results[0]);
+      return response.results[0];
     } catch (error) {
-      console.log(error.message);
+      return error.message;
     }
   }
 

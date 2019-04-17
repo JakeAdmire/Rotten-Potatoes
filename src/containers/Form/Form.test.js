@@ -2,16 +2,18 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import { Form, mapStateToProps, mapDispatchToProps } from './Form';
-import { setRestaurants, setLocation, setRedirect, isLoading } from '../../actions';
+import { setRestaurants, setLocation, isLoading } from '../../actions';
 
 describe('Form', () => {
 
   let wrapper;
-  let mockSetLocation = jest.fn()
+  let mockSetLocation = jest.fn();
+  let mockIsLoading = jest.fn();
 
   beforeEach(() => {
     wrapper = shallow(
-      <Form setLocation={mockSetLocation} />
+      <Form setLocation={mockSetLocation}
+            isLoading={mockIsLoading} />
     )
   })
 
@@ -46,10 +48,35 @@ describe('Form', () => {
     expect(mockSpy).toBeCalled();
   })
 
+  it('should return an error message when geolocation is not enabled', () => {
+    const handleClick = wrapper.instance().handleClick();
+    expect(handleClick).toEqual("geolocation is not enabled/supported in this browser");
+  })
+  
+  it('should dispatch isLoading when handleClick is called', () => {
+    const mockGeolocation = {
+      getCurrentPosition: jest.fn(),
+      watchPosition: jest.fn()
+    };
+    global.navigator.geolocation = mockGeolocation;
+    wrapper.instance().handleClick();
+    expect(mockIsLoading).toHaveBeenCalledWith(true);
+  })
+
+  it('should invoke getCurrentPosition when handleClick is invoked', () => {
+    const mockGeolocation = {
+      getCurrentPosition: jest.fn(),
+      watchPosition: jest.fn()
+    };
+    global.navigator.geolocation = mockGeolocation;
+    wrapper.instance().handleClick();
+    expect(mockGeolocation.getCurrentPosition).toBeCalled();
+  })
+
   it.skip('should call handleEnter if key is pressed', () => {
     const mockEvent = { key: 'Enter' };
-    const instance = wrapper.instance();
-    let mockSpy = jest.spyOn(instance, 'handleEnter');
+    let mockSpy = jest.spyOn(wrapper.instance(), 'handleEnter');
+    wrapper.update();
     wrapper.setState({ value: 'test'});
     wrapper.find('div').simulate('keypress', mockEvent);
     expect(mockSpy).toHaveBeenCalled();
@@ -62,6 +89,23 @@ describe('Form', () => {
     };
     wrapper.instance().gatherLocationInfo(mockResult);
     expect(mockSetLocation).toHaveBeenCalled();
+  })
+
+  it('should call gatherLocationInfo when getAddress is invoked with proper coordinates', async () => {
+    const mockPosition = {
+      accuracy: 201573,
+      latitude: 39.5500507,
+      longitude: -105.78206739999999
+    }
+    const mockSpy = jest.spyOn(wrapper.instance(), 'gatherLocationInfo');
+    await wrapper.instance().getAddress(mockPosition);
+    expect(mockSpy).toBeCalled();
+  })
+
+  it('should throw an error message when getAddress is called with improper coordinates', async () => {
+    const mockPosition = { latitude: 12.123123, longitude: 132.12313 };
+    const getAddress = await wrapper.instance().getAddress(mockPosition);
+    expect(getAddress).toEqual("Server returned status code ZERO_RESULTS");
   })
 
   describe('mapStateToProps', () => {
