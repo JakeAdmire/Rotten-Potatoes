@@ -8,12 +8,10 @@ describe('App', () => {
 
   let wrapper;
   let mockSetRestaurants = jest.fn()
-  let mockFetchRestaurants = jest.fn()
 
   beforeEach(() => {
     wrapper = shallow(
-      <App  setRestaurants={mockSetRestaurants}
-            fetchRestaurants={mockFetchRestaurants} />
+      <App  setRestaurants={mockSetRestaurants} />
     )
   })
 
@@ -22,10 +20,16 @@ describe('App', () => {
   })
 
   it('should invoke the fetchRestaurants function on componentDidMount', () => {
-    const instance = wrapper.instance();
-    jest.spyOn(instance, 'fetchRestaurants')
+    const mockSpy = jest.spyOn(wrapper.instance(), 'fetchRestaurants');
     wrapper.instance().componentDidMount();
-    expect(instance.fetchRestaurants).toBeCalled();
+    expect(mockSpy).toBeCalled();
+  })
+
+  it.skip('should call gatherRestaurantNames when fetchRestaurants is invoked', () => {
+    const instance = wrapper.instance();
+    jest.spyOn(instance, 'gatherRestaurantNames')
+    wrapper.instance().fetchRestaurants();
+    expect(instance.gatherRestaurantNames).toBeCalled();
   })
 
   it('should dispatch setRestaurants when gatherRestaurantNames is called', () => {
@@ -35,16 +39,6 @@ describe('App', () => {
     ]
     wrapper.instance().gatherRestaurantNames(mockData);
     expect(mockSetRestaurants).toHaveBeenCalled();
-  })
-
-  describe('mapStateToProps', () => {
-
-    it('should return a props object', () => {
-      let mockState = { redirect: false };
-      let results = mapStateToProps(mockState);
-      expect(results).toEqual(mockState);
-    })
-
   })
 
   describe('mapDispatchToProps', () => {
