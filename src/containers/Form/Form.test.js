@@ -20,7 +20,7 @@ describe('Form', () => {
   })
 
   it('should have default state', () => {
-    let mockState = { value: '' };
+    let mockState = {redirect: false, value: ''};
     expect(wrapper.state()).toEqual(mockState);
   })
 
@@ -28,7 +28,14 @@ describe('Form', () => {
     const mockStateChange = { value: "test" }
     const mockEvent = { target: mockStateChange };
     wrapper.instance().handleChange(mockEvent);
-    expect(wrapper.state()).toEqual(mockStateChange);
+    expect(wrapper.state('value')).toEqual(mockStateChange.value);
+  })
+
+  it('should update state when gatherLocationInfo is invoked', () => {
+    const mockStateChange = { redirect: true };
+    const mockResult = { formatted_address: 'HOME', geometry: { location: 'NOT HOME' }};
+    wrapper.instance().gatherLocationInfo(mockResult);
+    expect(wrapper.state('redirect')).toEqual(mockStateChange.redirect)
   })
 
   it.skip('should call handleClick on click', () => {
