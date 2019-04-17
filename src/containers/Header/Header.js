@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { setRedirect } from '../../actions';
+import { NavLink } from 'react-router-dom';
 
 export const Header = (props) => {
 
@@ -17,7 +18,7 @@ export const Header = (props) => {
       <div className="nav">
         <p>Showing Results for:</p>
         <p>{ props.location && props.location.name }</p>
-        <button onClick={redirect}>change location..</button>
+        <NavLink to="/">change location..</NavLink>
       </div>
     </div>
   )
