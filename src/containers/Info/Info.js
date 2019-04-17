@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export class Info extends Component {
 
@@ -33,4 +34,11 @@ export class Info extends Component {
       </div>
     )
   }
+}
+
+Info.propTypes = {
+  name: PropTypes.string,
+  address: PropTypes.string,
+  correctPlaces: PropTypes.array,
+  distance: PropTypes.number
 }
