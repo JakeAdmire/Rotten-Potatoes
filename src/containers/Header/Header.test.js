@@ -1,8 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { Header, mapStateToProps, mapDispatchToProps } from './Header';
-import { setRedirect } from '../../actions';
+import { Header, mapStateToProps } from './Header';
 
 describe('Header', () => {
 
@@ -19,33 +18,16 @@ describe('Header', () => {
     expect(wrapper).toMatchSnapshot();
   })
 
-  it('should dispatch setRedirect when the redirect method is called', () => {
-    wrapper.find('button').simulate('click');
-    expect(mockSetRedirect).toHaveBeenCalledWith('');
-  })
+  describe('mapStateToProps', () => {
 
-})
-
-describe('mapStateToProps', () => {
-
-  let mockState = { location: '' };
-  let mockProps = { location: mockState.location };
-
-  it('should return a props object', () => {
-    const results = mapStateToProps(mockState);
-    expect(results).toEqual(mockProps);
-  })
-
-})
-
-describe('mapDispatchToProps', () => {
-
-  it('should return a props object', () => {
-    let mockDispatch = jest.fn();
-    let actionToDispatch = setRedirect('home');
-    let mappedProps = mapDispatchToProps(mockDispatch);
-    mappedProps.setRedirect('home');
-    expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+    let mockState = { location: '' };
+    let mockProps = { location: mockState.location };
+  
+    it('should return a props object', () => {
+      const results = mapStateToProps(mockState);
+      expect(results).toEqual(mockProps);
+    })
+  
   })
 
 })

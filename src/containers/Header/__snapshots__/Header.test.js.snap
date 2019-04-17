@@ -35,11 +35,11 @@ ShallowWrapper {
             Showing Results for:
           </p>
           <p />
-          <button
-            onClick={[Function]}
+          <NavLink
+            to="/"
           >
             change location..
-          </button>
+          </NavLink>
         </div>,
       ],
       "className": "Header",
@@ -80,11 +80,11 @@ ShallowWrapper {
               Showing Results for:
             </p>,
             <p />,
-            <button
-              onClick={[Function]}
+            <NavLink
+              to="/"
             >
               change location..
-            </button>,
+            </NavLink>,
           ],
           "className": "nav",
         },
@@ -115,14 +115,14 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "host",
+            "nodeType": "function",
             "props": Object {
               "children": "change location..",
-              "onClick": [Function],
+              "to": "/",
             },
             "ref": null,
             "rendered": "change location..",
-            "type": "button",
+            "type": [Function],
           },
         ],
         "type": "div",
@@ -151,11 +151,11 @@ ShallowWrapper {
               Showing Results for:
             </p>
             <p />
-            <button
-              onClick={[Function]}
+            <NavLink
+              to="/"
             >
               change location..
-            </button>
+            </NavLink>
           </div>,
         ],
         "className": "Header",
@@ -196,11 +196,11 @@ ShallowWrapper {
                 Showing Results for:
               </p>,
               <p />,
-              <button
-                onClick={[Function]}
+              <NavLink
+                to="/"
               >
                 change location..
-              </button>,
+              </NavLink>,
             ],
             "className": "nav",
           },
@@ -231,14 +231,14 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "host",
+              "nodeType": "function",
               "props": Object {
                 "children": "change location..",
-                "onClick": [Function],
+                "to": "/",
               },
               "ref": null,
               "rendered": "change location..",
-              "type": "button",
+              "type": [Function],
             },
           ],
           "type": "div",
