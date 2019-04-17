@@ -41,6 +41,16 @@ describe('App', () => {
     expect(mockSetRestaurants).toHaveBeenCalled();
   })
 
+  describe('mapStateToProps', () => {
+
+    it('should return a props object', () => {
+      const mockState = { card: {} };
+      const results = mapStateToProps(mockState);
+      expect(results).toEqual(mockState);
+    })
+
+  })
+
   describe('mapDispatchToProps', () => {
 
     it('should dispatch setRestaurants when its prop is called', () => {
