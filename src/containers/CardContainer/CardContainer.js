@@ -57,7 +57,7 @@ export class CardContainer extends Component {
     });
 
     restaurants = restaurants.filter(restaurant => restaurant !== null);
-    console.log(restaurants);
+    // console.log(restaurants);
     this.setState({cards: restaurants});
     this.props.isLoading(false);
   }
@@ -65,7 +65,6 @@ export class CardContainer extends Component {
   render() {
     const { loading, location, restaurants } = this.props;
     const { cards } = this.state;
-
     if (location.coords && !cards.length) this.fetchRestaurants(restaurants);
 
     return loading
@@ -81,7 +80,7 @@ export class CardContainer extends Component {
         <div className="CardContainer">
           <Header />
           <div className="card-grid">
-            { cards.map((card, index) => <Card key={card.id} {...card} />) }
+            { cards.map((card) => <Card key={card.id} {...card} />) }
           </div>
         </div>
       )
