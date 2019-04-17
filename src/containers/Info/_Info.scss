@@ -1,6 +1,33 @@
 .Info {
   box-sizing: border-box;
-  background: #c58b6c;
-  border-radius: 15px;
+  background: #4D4D4D;
   padding: 10px;
+  color: #BFBFBF;
+
+  h1, p { margin: 0; }
+
+  h1 {
+    font-family: 'Lobster', cursive;
+    color: white;
+    font-size: 36px;
+  }
+
+  p:nth-child(3) { margin: 10px 0; }
+
+  .inspection-info {
+    background: #BFBFBF;
+    padding: 10px;
+    color: white;
+
+    h3 {
+      margin: 0;
+      font-weight: 600;
+      font-size: 20px;
+      text-decoration: underline;
+    }
+
+    p { margin: 5px 0; }
+  }
 }
+
+// #BFBFBF

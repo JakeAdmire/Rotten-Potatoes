@@ -25,12 +25,14 @@ export class Info extends Component {
         <h1>{name}</h1>
         <p>{distanceText}</p>
         <p>{address}</p>
-        <h3>Latest Inspection:</h3>
-        <p>Date: {date}</p>
-        <p>Inspection Type: {inspectiontype}</p>
-        <p>Inspection Violation: {violation}</p>
-        <p>Violation Status: {violationtype}</p>
-        <p>Inspection Score: {inspectionscore}</p>
+        <div className="inspection-info">
+          <h3>Latest Inspection:</h3>
+          <p>Date: {date}</p>
+          <p>Inspection Type: {inspectiontype}</p>
+          <p>Inspection Violation: {violation}</p>
+          <p>Violation Status: {violationtype}</p>
+          <p>Inspection Score: {inspectionscore}</p>
+        </div>
       </div>
     )
   }
