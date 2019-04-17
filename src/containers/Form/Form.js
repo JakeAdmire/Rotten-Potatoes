@@ -3,16 +3,23 @@ import Geocode from "react-geocode";
 import { connect } from 'react-redux';
 import { setRestaurants, setLocation, isLoading } from '../../actions';
 import { geocodeKey } from '../../keys';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
 
 export class Form extends Component {
   constructor() {
     super();
-    this.state = { value: '' };
+    this.state = { 
+      value: '', 
+      redirect: false 
+    };
   }
 
   componentDidMount() {
     document.addEventListener('keydown', this.handleEnter); 
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.handleEnter);
   }
 
   handleEnter = (event) => {
@@ -43,6 +50,7 @@ export class Form extends Component {
       coords: result.geometry.location
     };
     this.props.setLocation(location);
+    this.setState({redirect: true});
   }
 
   handleClick = () => {
@@ -68,7 +76,9 @@ export class Form extends Component {
 
   render() {
     const { value } = this.state;
-    return (
+    return this.state.redirect
+      ? <Redirect to="/locations" />
+      : (
       <div className="Form">
         <h1>Rotten Potatoes</h1>
         <label htmlFor="address">Enter an address:</label>
