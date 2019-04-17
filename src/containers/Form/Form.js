@@ -45,18 +45,14 @@ export class Form extends Component {
     this.props.setLocation(location);
   }
 
-  handleClick = (event) => {
-    if ("geolocation" in navigator) {
+  handleClick = () => {
+    if (navigator.geolocation) {
       this.props.isLoading(true);
-      navigator.geolocation.getCurrentPosition(
-        function(position) { 
-          const { latitude, longitude } = position.coords;
-          callFunction({latitude, longitude});
-        }
-      );
-      const callFunction = (position) => { this.getAddress(position); }
+      navigator.geolocation.getCurrentPosition(position => {
+        this.getAddress(position.coords);
+      })
     } else {
-      console.log('geolocation is not enabled on this browser');
+      console.log('geolocation is not enabled/supported in this browser');
     }
   }
 
