@@ -1,11 +1,14 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { Card } from './Card';
+import { Card, mapDispatchToProps } from './Card';
+import { setCard } from '../../actions';
 
 describe('Card', () => {
 
   let wrapper;
+
+  const mockSetCard = jest.fn();
   const mockProps = {
     name: 'TACO BELL',
     address: '123 STREET ST. DENVER, CO',
@@ -18,7 +21,8 @@ describe('Card', () => {
 
   beforeEach(() => {
     wrapper = shallow (
-      <Card {...mockProps} />
+      <Card {...mockProps}
+            setCard={mockSetCard} />
     )
   })
 
@@ -39,6 +43,24 @@ describe('Card', () => {
   it('should return the proper value when buildAddress is invoked', () => {
     let buildAddress = wrapper.instance().buildAddress(mockProps.address);
     expect(buildAddress).toEqual("123 Street St. DENVER, Co");
+  })
+
+  it('should dispatch setCard when handleClick is invoked', () => {
+    wrapper.instance().handleClick();
+    expect(mockSetCard).toBeCalled();
+  })
+
+  describe('mapDispatchToProps', () => {
+
+    it('should dispatch setRestaurants when its prop is called', () => {
+      let mockCard = {};
+      const mockDispatch = jest.fn();
+      const actionToDispatch = setCard(mockCard);
+      const mappedProps = mapDispatchToProps(mockDispatch);
+      mappedProps.setCard(mockCard);
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+    })  
+
   })
   
 })

@@ -33,6 +33,12 @@ describe('CardContainer', () => {
     expect(wrapper.state()).toEqual(mockState);
   })
 
+  it('should update state when sortByDistance is called', () => {
+    expect(wrapper.state('cards')).toEqual([]);
+    wrapper.instance().sortByDistance(mockProps.restaurants);
+    expect(wrapper.state('cards')).toEqual(mockProps.restaurants);
+  })
+
   it('should call fetchRestaurants when it has the correct props', () => {
     const mockSpy = jest.spyOn(wrapper.instance(), 'fetchRestaurants');
     wrapper.update();

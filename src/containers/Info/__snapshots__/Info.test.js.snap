@@ -3,7 +3,18 @@
 exports[`Info should match snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Info />,
+  Symbol(enzyme.__unrendered__): <Info
+    address="123 FAKE ST. FORT COLLINS, CO"
+    correctPlaces={
+      Array [
+        Object {
+          "inspectiondate": "1234543",
+        },
+      ]
+    }
+    distance={12.3123}
+    name="TACO BELL"
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "checkPropTypes": [Function],
@@ -18,10 +29,170 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": "INFO",
+      "children": Array [
+        <h1>
+          TACO BELL
+        </h1>,
+        <p>
+          12.3m away
+        </p>,
+        <p>
+          123 FAKE ST. FORT COLLINS, CO
+        </p>,
+        <h3>
+          Latest Inspection:
+        </h3>,
+        <p>
+          Date: 
+          1234543
+        </p>,
+        <p>
+          Inspection Type: 
+        </p>,
+        <p>
+          Inspection Violation: 
+        </p>,
+        <p>
+          Violation Status: 
+        </p>,
+        <p>
+          Inspection Score: 
+        </p>,
+      ],
+      "className": "Info",
     },
     "ref": null,
-    "rendered": "INFO",
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "TACO BELL",
+        },
+        "ref": null,
+        "rendered": "TACO BELL",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "12.3m away",
+        },
+        "ref": null,
+        "rendered": "12.3m away",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "123 FAKE ST. FORT COLLINS, CO",
+        },
+        "ref": null,
+        "rendered": "123 FAKE ST. FORT COLLINS, CO",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Latest Inspection:",
+        },
+        "ref": null,
+        "rendered": "Latest Inspection:",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Date: ",
+            "1234543",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Date: ",
+          "1234543",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Inspection Type: ",
+            undefined,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Inspection Type: ",
+          undefined,
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Inspection Violation: ",
+            undefined,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Inspection Violation: ",
+          undefined,
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Violation Status: ",
+            undefined,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Violation Status: ",
+          undefined,
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Inspection Score: ",
+            undefined,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Inspection Score: ",
+          undefined,
+        ],
+        "type": "p",
+      },
+    ],
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -30,10 +201,170 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "INFO",
+        "children": Array [
+          <h1>
+            TACO BELL
+          </h1>,
+          <p>
+            12.3m away
+          </p>,
+          <p>
+            123 FAKE ST. FORT COLLINS, CO
+          </p>,
+          <h3>
+            Latest Inspection:
+          </h3>,
+          <p>
+            Date: 
+            1234543
+          </p>,
+          <p>
+            Inspection Type: 
+          </p>,
+          <p>
+            Inspection Violation: 
+          </p>,
+          <p>
+            Violation Status: 
+          </p>,
+          <p>
+            Inspection Score: 
+          </p>,
+        ],
+        "className": "Info",
       },
       "ref": null,
-      "rendered": "INFO",
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "TACO BELL",
+          },
+          "ref": null,
+          "rendered": "TACO BELL",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "12.3m away",
+          },
+          "ref": null,
+          "rendered": "12.3m away",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "123 FAKE ST. FORT COLLINS, CO",
+          },
+          "ref": null,
+          "rendered": "123 FAKE ST. FORT COLLINS, CO",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Latest Inspection:",
+          },
+          "ref": null,
+          "rendered": "Latest Inspection:",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Date: ",
+              "1234543",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Date: ",
+            "1234543",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Inspection Type: ",
+              undefined,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Inspection Type: ",
+            undefined,
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Inspection Violation: ",
+              undefined,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Inspection Violation: ",
+            undefined,
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Violation Status: ",
+              undefined,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Violation Status: ",
+            undefined,
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Inspection Score: ",
+              undefined,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Inspection Score: ",
+            undefined,
+          ],
+          "type": "p",
+        },
+      ],
       "type": "div",
     },
   ],
