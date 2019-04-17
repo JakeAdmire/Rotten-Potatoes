@@ -7,19 +7,11 @@ import { setRestaurants, setLocation, setRedirect, isLoading } from '../../actio
 describe('Form', () => {
 
   let wrapper;
-  let mockHandleClick = jest.fn();
-  let mockGetLocation = jest.fn();
-  let mockSetLocation = jest.fn();
-  let mockSetRedirect = jest.fn();
-  let mockHandleEnter = jest.fn();
+  let mockSetLocation = jest.fn()
 
   beforeEach(() => {
     wrapper = shallow(
-      <Form handleClick={mockHandleClick}
-            getLocation={mockGetLocation}
-            setLocation={mockSetLocation}
-            setRedirect={mockSetRedirect}
-            handleEnter={mockHandleEnter} />
+      <Form setLocation={mockSetLocation} />
     )
   })
 
@@ -32,12 +24,19 @@ describe('Form', () => {
     expect(wrapper.state()).toEqual(mockState);
   })
 
+  it('should update state when handleChange is invoked', () => {
+    const mockStateChange = { value: "test" }
+    const mockEvent = { target: mockStateChange };
+    wrapper.instance().handleChange(mockEvent);
+    expect(wrapper.state()).toEqual(mockStateChange);
+  })
+
   it.skip('should call handleClick on click', () => {
-    let handleClick = jest.fn();
-    wrapper = shallow( <Form  handleClick={handleClick} />);
+    const mockSpy = jest.spyOn(wrapper.instance(), 'handleClick');
     wrapper.update();
-    wrapper.find('#test').simulate('click');
-    expect(handleClick).toHaveBeenCalled();
+
+    wrapper.find('NavLink').simulate('click');
+    expect(mockSpy).toBeCalled();
   })
 
   it.skip('should call handleEnter if key is pressed', () => {
@@ -56,15 +55,6 @@ describe('Form', () => {
     };
     wrapper.instance().gatherLocationInfo(mockResult);
     expect(mockSetLocation).toHaveBeenCalled();
-  })
-
-  it('should dispatch setRedirect when gatherLocationInfo is called', () => {
-    const mockResult = { 
-      formatted_address: 'Denver',
-      geometry: { location: {} } 
-    };
-    wrapper.instance().gatherLocationInfo(mockResult);
-    expect(mockSetRedirect).toHaveBeenCalled();
   })
 
   describe('mapStateToProps', () => {
@@ -95,14 +85,6 @@ describe('Form', () => {
       const actionToDispatch = setLocation(mockLocation);
       const mappedProps = mapDispatchToProps(mockDispatch);
       mappedProps.setLocation(mockLocation);
-      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
-    })
-
-    it('should dispatch setRedirect when its props is called', () => {
-      let mockRedirect = 'home';
-      const actionToDispatch = setRedirect(mockRedirect);
-      const mappedProps = mapDispatchToProps(mockDispatch);
-      mappedProps.setRedirect(mockRedirect);
       expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
     })
 

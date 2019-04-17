@@ -4,11 +4,7 @@ exports[`Form should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Form
-    getLocation={[MockFunction]}
-    handleClick={[MockFunction]}
-    handleEnter={[MockFunction]}
     setLocation={[MockFunction]}
-    setRedirect={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -43,13 +39,12 @@ ShallowWrapper {
         <h3>
           OR
         </h3>,
-        <button
-          id="test"
+        <NavLink
           onClick={[Function]}
+          to="/locations"
         >
           Find My Location
-        </button>,
-        <p />,
+        </NavLink>,
       ],
       "className": "Form",
     },
@@ -107,26 +102,15 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
+        "nodeType": "function",
         "props": Object {
           "children": "Find My Location",
-          "id": "test",
           "onClick": [Function],
+          "to": "/locations",
         },
         "ref": null,
         "rendered": "Find My Location",
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": null,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "p",
+        "type": [Function],
       },
     ],
     "type": "div",
@@ -156,13 +140,12 @@ ShallowWrapper {
           <h3>
             OR
           </h3>,
-          <button
-            id="test"
+          <NavLink
             onClick={[Function]}
+            to="/locations"
           >
             Find My Location
-          </button>,
-          <p />,
+          </NavLink>,
         ],
         "className": "Form",
       },
@@ -220,26 +203,15 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "function",
           "props": Object {
             "children": "Find My Location",
-            "id": "test",
             "onClick": [Function],
+            "to": "/locations",
           },
           "ref": null,
           "rendered": "Find My Location",
-          "type": "button",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": null,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "p",
+          "type": [Function],
         },
       ],
       "type": "div",
