@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import haversine from 'haversine';
-// import { Route } from 'react-router-dom';
 
 import Card from '../Card/Card';
 import Header from '../Header/Header';
 import { isLoading } from '../../actions';
 import { fetchAll } from '../../fetchAll';
+import loader from '../../media/91.svg';
 
 export class CardContainer extends Component {
   constructor() {
@@ -59,6 +59,7 @@ export class CardContainer extends Component {
     restaurants = restaurants.filter(restaurant => restaurant !== null);
     // console.log(restaurants);
     this.setState({cards: restaurants});
+    // this.props.setCards(restaurants);
     this.props.isLoading(false);
   }
 
@@ -72,7 +73,7 @@ export class CardContainer extends Component {
       ? (
         <div className="CardContainer">
           <Header />
-          <p className="loader">Loading...</p>
+          <img alt='loader gif' src={loader} className="loader"></img>
         </div>
       )
 
