@@ -12,7 +12,7 @@ RottenPotatoes is a solo project designed to push students to be work in a more 
 
 <img width="1500" alt="Screen Shot 2019-04-16 at 11 13 39 PM" src="https://user-images.githubusercontent.com/44077214/56262769-66107f80-609d-11e9-9a48-cbca5bf784ad.png">
 
-<img width="1500" alt="Screen Shot 2019-04-16 at 11 13 51 PM" src="https://user-images.githubusercontent.com/44077214/56262779-6f99e780-609d-11e9-9a9f-cbfe8dba12fe.png">
+<img width="1500" alt="Screen Shot 2019-04-17 at 7 34 50 AM" src="https://user-images.githubusercontent.com/44077214/56297058-db577100-60ec-11e9-9ac2-565f2a93b980.png">
 
 ## Getting Started:
 
