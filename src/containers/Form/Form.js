@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import Geocode from "react-geocode";
 import { connect } from 'react-redux';
+import { NavLink, Redirect } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
 import { setRestaurants, setLocation, isLoading } from '../../actions';
 import { geocodeKey } from '../../keys';
-import { NavLink, Redirect } from 'react-router-dom';
 
 export class Form extends Component {
   constructor() {
@@ -104,5 +106,12 @@ export const mapDispatchToProps = (dispatch) => ({
   setLocation: (location) => dispatch(setLocation(location)),
   isLoading: (boolean) => dispatch(isLoading(boolean)),
 });
+
+Form.propTypes = {
+  loading: PropTypes.bool,
+  setRestaurants: PropTypes.func,
+  setLocation: PropTypes.func,
+  isLoading: PropTypes.func
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(Form);

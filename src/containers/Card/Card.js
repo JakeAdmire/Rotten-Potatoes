@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import { setCard } from '../../actions';
-import { connect } from 'react-redux';
 
 export class Card extends Component {
 
@@ -69,5 +70,9 @@ export class Card extends Component {
 export const mapDispatchToProps = (dispatch) => ({
   setCard: (card) => dispatch(setCard(card))
 })
+
+Card.propTypes = {
+  setCard: PropTypes.func
+}
 
 export default connect(null, mapDispatchToProps)(Card);

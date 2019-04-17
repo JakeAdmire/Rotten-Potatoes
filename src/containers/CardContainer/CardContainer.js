@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import haversine from 'haversine';
+import PropTypes from 'prop-types';
 
 import Card from '../Card/Card';
 import Header from '../Header/Header';
@@ -95,5 +96,12 @@ export const mapStateToProps = (state) => ({
 export const mapDispatchToProps = (dispatch) => ({
   isLoading: (boolean) => dispatch(isLoading(boolean))
 })
+
+CardContainer.propTypes = {
+  location: PropTypes.object,
+  restaurants: PropTypes.array,
+  loading: PropTypes.bool,
+  isLoading: PropTypes.func
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(CardContainer);

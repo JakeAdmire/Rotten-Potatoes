@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Route } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import { setRestaurants } from '../../actions';
 import Form from '../Form/Form';
@@ -52,5 +53,10 @@ export const mapStateToProps = (state) => ({
 export const mapDispatchToProps = (dispatch) => ({
   setRestaurants: (restaurants) => dispatch(setRestaurants(restaurants)),
 })
+
+App.propTypes = {
+  card: PropTypes.object,
+  setRestaurants: PropTypes.func
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
