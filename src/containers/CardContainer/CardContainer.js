@@ -55,11 +55,8 @@ export class CardContainer extends Component {
       if (!a || !b) return null;
       return a.distance - b.distance;
     });
-
     restaurants = restaurants.filter(restaurant => restaurant !== null);
-    // console.log(restaurants);
     this.setState({cards: restaurants});
-    // this.props.setCards(restaurants);
     this.props.isLoading(false);
   }
 
