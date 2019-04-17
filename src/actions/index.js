@@ -8,12 +8,12 @@ export const setLocation = (location) => ({
   location
 })
 
-export const setRedirect = (redirect) => ({
-  type: 'SET_REDIRECT',
-  redirect
-})
-
 export const isLoading = (boolean) => ({
   type: 'IS_LOADING',
   boolean
+})
+
+export const setCard = (card) =>({
+  type: 'SET_CARD',
+  card
 })
