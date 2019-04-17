@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Geocode from "react-geocode";
 import { connect } from 'react-redux';
-import { setRestaurants, setLocation, setRedirect, isLoading } from '../../actions';
+import { setRestaurants, setLocation, isLoading } from '../../actions';
 import { geocodeKey } from '../../keys';
+import { NavLink } from 'react-router-dom';
 
 export class Form extends Component {
   constructor() {
@@ -42,7 +43,6 @@ export class Form extends Component {
       coords: result.geometry.location
     };
     this.props.setLocation(location);
-    this.props.setRedirect('locations');
   }
 
   handleClick = (event) => {
@@ -72,10 +72,6 @@ export class Form extends Component {
 
   render() {
     const { value } = this.state;
-    const placeholder='ex. 123 Fake Address, Denver, CO';
-
-    // let buttonText = this.props.loading ? 'loading..' : 'Find My Location';
-    let loadingText = this.props.loading ? 'loading...' : null;
     return (
       <div className="Form">
         <h1>Rotten Potatoes</h1>
@@ -84,11 +80,10 @@ export class Form extends Component {
                 onChange={this.handleChange} 
                 id="address" 
                 type="text" 
-                placeholder={placeholder}>
+                placeholder='ex. 123 Fake Address, Denver, CO'>
         </input>
         <h3>OR</h3>
-        <button id="test" onClick={this.handleClick}>Find My Location</button>
-        <p>{loadingText}</p>
+        <NavLink to="/locations" onClick={this.handleClick}>Find My Location</NavLink>
       </div>
     )
   }
@@ -101,7 +96,6 @@ export const mapStateToProps = (state) => ({
 export const mapDispatchToProps = (dispatch) => ({
   setRestaurants: (restaurants) => dispatch(setRestaurants(restaurants)),
   setLocation: (location) => dispatch(setLocation(location)),
-  setRedirect: (redirect) => dispatch(setRedirect(redirect)),
   isLoading: (boolean) => dispatch(isLoading(boolean)),
 });
 

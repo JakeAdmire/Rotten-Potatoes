@@ -1,21 +1,17 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export class Card extends Component {
 
-  buildTitle = () => {
-    if (!this.props.facilityname) return null;
-
-    const { facilityname } = this.props;
-    let nameArray = facilityname.toLowerCase().split(' ');
+  buildTitle = (name) => {
+    let nameArray = name.toLowerCase().split(' ');
 
     return nameArray.map(word => {
       return word.charAt(0).toUpperCase() + word.slice(1);
     }).join(' ');
   }
 
-  buildAddress = () => {
-    if (!this.props.address) return null;
-    const { address } = this.props;
+  buildAddress = (address) => {
     let addressArray = address.toLowerCase().split(' ');
 
     addressArray = addressArray.map(word => {
@@ -28,9 +24,7 @@ export class Card extends Component {
     return addressArray.reverse().join(' ');
   }
 
-  buildDistance = () => {
-    if (!this.props.distance) return null;
-    const { distance } = this.props;
+  buildDistance = (distance) => {
     let splitDistance = distance.toString().split('.');
     let decimal = splitDistance[1].slice(0, 1);
 
@@ -38,20 +32,24 @@ export class Card extends Component {
   }
 
   render() {
-    let headerText = this.buildTitle();
-    let addressText = this.buildAddress();
-    let distanceText = this.buildDistance();
+    const { name, address, distance, id } = this.props;
+    const { inspectionscore, violationtype } = this.props.correctPlaces[0];
+
+    let headerText = this.buildTitle(name);
+    let addressText = this.buildAddress(address);
+    let distanceText = this.buildDistance(distance);
+
     return (
       <div className="Card">
         <div className="card-text">
-          <h3>{headerText}</h3>
+          <Link to={`/locations/${id}`}>{headerText}</Link>
           <p>{addressText}</p>
           <p>{distanceText}</p>
         </div>
         <div className="card-percentage">
           <p>inspection score:</p>
-          <p>{ this.props.inspectionscore + '%' }</p>
-          <p>{ this.props.violationtype }</p>
+          <p>{ inspectionscore + '%' }</p>
+          <p>{ violationtype }</p>
         </div>
         <div className="card-favorite">
           +
