@@ -16,6 +16,7 @@ ShallowWrapper {
     id={1}
     inspectionscore={25}
     name="TACO BELL"
+    setCard={[MockFunction]}
     violationtype="critical"
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -37,6 +38,7 @@ ShallowWrapper {
           className="card-text"
         >
           <Link
+            onClick={[Function]}
             to="/locations/1"
           >
             Taco Bell
@@ -76,6 +78,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Link
+              onClick={[Function]}
               to="/locations/1"
             >
               Taco Bell
@@ -97,6 +100,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": "Taco Bell",
+              "onClick": [Function],
               "to": "/locations/1",
             },
             "ref": null,
@@ -208,6 +212,7 @@ ShallowWrapper {
             className="card-text"
           >
             <Link
+              onClick={[Function]}
               to="/locations/1"
             >
               Taco Bell
@@ -247,6 +252,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Link
+                onClick={[Function]}
                 to="/locations/1"
               >
                 Taco Bell
@@ -268,6 +274,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": "Taco Bell",
+                "onClick": [Function],
                 "to": "/locations/1",
               },
               "ref": null,
