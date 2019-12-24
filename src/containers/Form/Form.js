@@ -5,7 +5,6 @@ import { NavLink, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import { setRestaurants, setLocation, isLoading } from '../../actions';
-import { geocodeKey } from '../../keys';
 
 export class Form extends Component {
   constructor() {
@@ -36,7 +35,7 @@ export class Form extends Component {
 
   getLocation = async () => {
     this.props.isLoading(true);
-    Geocode.setApiKey(geocodeKey);
+    Geocode.setApiKey(process.env.REACT_APP_GEOCODE_KEY);
     const { value } = this.state;
     try {
       const response = await Geocode.fromAddress(value);
@@ -67,7 +66,7 @@ export class Form extends Component {
   }
 
   getAddress = async (position) => {
-    Geocode.setApiKey(geocodeKey);
+    Geocode.setApiKey(process.env.REACT_APP_GEOCODE_KEY);
     try {
       const response = await Geocode.fromLatLng(position.latitude, position.longitude);
       this.gatherLocationInfo(response.results[0]);
