@@ -13,7 +13,7 @@ export const Header = (props) => {
       <div className="nav">
         <p>Showing Results for:</p>
         <p>{ props.location && props.location.name }</p>
-        <NavLink to="/">change location..</NavLink>
+        <NavLink to="/Rotten-Potatoes">change location..</NavLink>
       </div>
     </div>
   )

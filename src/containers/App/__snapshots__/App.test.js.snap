@@ -47,7 +47,7 @@ ShallowWrapper {
               }
             }
             exact={true}
-            path="/"
+            path="/Rotten-Potatoes"
           />
           <Route
             component={
@@ -61,10 +61,10 @@ ShallowWrapper {
               }
             }
             exact={true}
-            path="/locations"
+            path="/Rotten-Potatoes/locations"
           />
           <Route
-            path="/locations/:id"
+            path="/Rotten-Potatoes/locations/:id"
             render={[Function]}
           />
         </div>,
@@ -116,7 +116,7 @@ ShallowWrapper {
                 }
               }
               exact={true}
-              path="/"
+              path="/Rotten-Potatoes"
             />,
             <Route
               component={
@@ -130,10 +130,10 @@ ShallowWrapper {
                 }
               }
               exact={true}
-              path="/locations"
+              path="/Rotten-Potatoes/locations"
             />,
             <Route
-              path="/locations/:id"
+              path="/Rotten-Potatoes/locations/:id"
               render={[Function]}
             />,
           ],
@@ -155,7 +155,7 @@ ShallowWrapper {
                 Symbol(Symbol.hasInstance): [Function],
               },
               "exact": true,
-              "path": "/",
+              "path": "/Rotten-Potatoes",
             },
             "ref": null,
             "rendered": null,
@@ -175,7 +175,7 @@ ShallowWrapper {
                 Symbol(Symbol.hasInstance): [Function],
               },
               "exact": true,
-              "path": "/locations",
+              "path": "/Rotten-Potatoes/locations",
             },
             "ref": null,
             "rendered": null,
@@ -186,7 +186,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "path": "/locations/:id",
+              "path": "/Rotten-Potatoes/locations/:id",
               "render": [Function],
             },
             "ref": null,
@@ -232,7 +232,7 @@ ShallowWrapper {
                 }
               }
               exact={true}
-              path="/"
+              path="/Rotten-Potatoes"
             />
             <Route
               component={
@@ -246,10 +246,10 @@ ShallowWrapper {
                 }
               }
               exact={true}
-              path="/locations"
+              path="/Rotten-Potatoes/locations"
             />
             <Route
-              path="/locations/:id"
+              path="/Rotten-Potatoes/locations/:id"
               render={[Function]}
             />
           </div>,
@@ -301,7 +301,7 @@ ShallowWrapper {
                   }
                 }
                 exact={true}
-                path="/"
+                path="/Rotten-Potatoes"
               />,
               <Route
                 component={
@@ -315,10 +315,10 @@ ShallowWrapper {
                   }
                 }
                 exact={true}
-                path="/locations"
+                path="/Rotten-Potatoes/locations"
               />,
               <Route
-                path="/locations/:id"
+                path="/Rotten-Potatoes/locations/:id"
                 render={[Function]}
               />,
             ],
@@ -340,7 +340,7 @@ ShallowWrapper {
                   Symbol(Symbol.hasInstance): [Function],
                 },
                 "exact": true,
-                "path": "/",
+                "path": "/Rotten-Potatoes",
               },
               "ref": null,
               "rendered": null,
@@ -360,7 +360,7 @@ ShallowWrapper {
                   Symbol(Symbol.hasInstance): [Function],
                 },
                 "exact": true,
-                "path": "/locations",
+                "path": "/Rotten-Potatoes/locations",
               },
               "ref": null,
               "rendered": null,
@@ -371,7 +371,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "path": "/locations/:id",
+                "path": "/Rotten-Potatoes/locations/:id",
                 "render": [Function],
               },
               "ref": null,
