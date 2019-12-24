@@ -21,7 +21,7 @@ jobs:
         npm run-script build
 
     - name: Deploy
-      uses: JakeAdmire/Rotten-Potatoes@releases/v3
+      uses: JakeAdmire/Rotten-Potatoes
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         REACT_APP_GEOCODE_KEY: ${{ secrets.REACT_APP_GEOCODE_KEY }}
