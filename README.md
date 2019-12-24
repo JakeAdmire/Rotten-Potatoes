@@ -1,53 +1,106 @@
-# RottenPotatoes
+###### Top
 
-## Overview:
+<br />
+<p align="center">
+  <a href="https://github.com/JakeAdmire/Rotten-Potatoes">
+    <img src="https://user-images.githubusercontent.com/44077214/71378023-7a3d4280-2583-11ea-93c7-607842c622e2.png" alt="Logo" width="300" height="80">
+  </a>
+  <h1 align="center">Rotten Potatoes</h1>
+  <p align="center">
+    Make sure the food is fresh & safe before you dig in!
+    <br />
+    <br />
+    <b><a href="https://jakeadmire.github.io/Rotten-Potatoes/">View Demo</a></b>
+  </p>
+</p>
+<div align="center">
 
-RottenPotatoes is a solo project designed to push students to be work in a more self-directed path. For my application, I chose to build a way for users to search through restaurants(with inspection report data attached) nearby their location
+[![LinkedIn][linkedin-shield]][linkedin-url] [![Gmail][gmail-shield]][gmail-url] [![GitHub][github-shield]][github-url]
+</div>
 
-[More information about original assignment can be found here](http://frontend.turing.io/projects/binary-challenge.html)
+## Table of Contents
 
-## Preview:
+- [About The Project](#About-The-Project)
+  - [Media](#Media)
+  - [Built With](#Built-With)
+    - [Acknowledgements](#Acknowledgements)
+- [Getting Started](#Getting-Started)
+  - [Prerequisites](#Prerequisites)
+  - [Installation](#Installation)
+    - [Front End](#Installation)
+    - [Back End](#API-Installation-Instructions)
+- [Assignment Details](#Assignment-Details)
 
-<img width="1500" alt="Screen Shot 2019-04-16 at 11 13 20 PM" src="https://user-images.githubusercontent.com/44077214/56262753-54c77300-609d-11e9-99e1-0be08909090f.png">
+## About The Project
 
-<img width="1500" alt="Screen Shot 2019-04-16 at 11 13 39 PM" src="https://user-images.githubusercontent.com/44077214/56262769-66107f80-609d-11e9-9a48-cbca5bf784ad.png">
-
-<img width="1500" alt="Screen Shot 2019-04-17 at 7 34 50 AM" src="https://user-images.githubusercontent.com/44077214/56297058-db577100-60ec-11e9-9ac2-565f2a93b980.png">
-
-## Getting Started:
-
-These instructions will get a copy of the project up and running on your local machine for usage and testing purposes.
-
-### Instructions
-clone down the repo: ```$ git clone https://github.com/JakeAdmire/JA--RottenPotatoes.git```
-
-cd into directory and ```$ npm install```
-
-launch in your browser: ```$ npm start ```
-
-## Future Development and Extensions Notes:
-
-- Add error message to DOM when user enters in an invalid location
-- Implement favorites functionality into restaurant cards
-
-### Technologies Used
-RottenPotatoes was built using: 
-- [SCSS](https://sass-lang.com/)
-- [React.js](https://reactjs.org/)
-- [React-Router](https://reacttraining.com/react-router/)
-- [Redux.js](https://redux.js.org/)
-
-And tested using:
-- [Enzyme](https://airbnb.io/enzyme/) & [Jest](https://airbnb.io/enzyme/docs/guides/jest.html)
-
-## Credits
-Credit for this project goes to: 
-- [Jake Admire](https://github.com/JakeAdmire)
+🥔 **Rotten Potatoes** lets you scope out the recent inspection report status of nearby restaurants!
 
 ---
-This project was assigned by David Whitaker and Christie Lynam 
 
-*@ Turing School of Software and Design, Denver, CO.*
+### Media:
+
+![enter image description here](https://user-images.githubusercontent.com/44077214/71390039-ef2c6e80-25bb-11ea-869e-6c029b660860.png)
+
+![full page screenshot](https://user-images.githubusercontent.com/44077214/71389563-1c781d00-25ba-11ea-91a5-e31c7f2e54fe.png)
+
+### Built With:
+- HTML5
+- SCSS 
+- JavaScript
+- ReactJS
+- Jest & Enzyme
+
+#### Acknowledgements:
+- React Router
+- Redux
+- Redux Thunk
+
+## Getting Started
+
+To get a local copy up and running follow these simple steps:
 
 ---
-**[Back to top](https://github.com/JakeAdmire/JA--RottenPotatoes/blob/master/README.md#rottenpotatoes)**
+
+### Prerequisites
+
+* npm
+```sh
+npm install npm@latest -g
+```
+
+---
+
+### Installation
+
+1. Clone the repo
+```sh
+git clone https://github.com/JakeAdmire/Rotten-Potatoes
+```
+2. Install NPM packages
+```sh
+cd Rotten-Potatoes && npm install
+```
+
+## Assignment Details
+
+The intended assignment was to build a fully self-directed project utilizing an API of my choosing. 
+
+---
+
+This project was assigned by Christie Lynam and David Whitaker
+
+_@ Turing School of Software & Design, Denver, CO._
+
+---
+
+**[BACK TO TOP](#top)**
+
+<!-- URL References  -->
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-0077b5.svg?style=for-the-badge&logo=linkedin
+[linkedin-url]: https://linkedin.com/in/jakeadmire
+
+[gmail-shield]: https://img.shields.io/badge/-Email-red.svg?style=for-the-badge&logo=gmail&logoColor=white
+[gmail-url]: mailto:jakeadmire1@gmail.com
+
+[github-shield]: https://img.shields.io/badge/dynamic/json?label=Follow&query=length&url=https://api.github.com/users/jakeadmire/followers&style=for-the-badge&logo=github
+[github-url]: https://github.com/JakeAdmire/
