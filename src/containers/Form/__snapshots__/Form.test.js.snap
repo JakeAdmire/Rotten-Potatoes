@@ -42,7 +42,7 @@ ShallowWrapper {
         </h3>,
         <NavLink
           onClick={[Function]}
-          to="/locations"
+          to="/Rotten-Potatoes/locations"
         >
           Find My Location
         </NavLink>,
@@ -107,7 +107,7 @@ ShallowWrapper {
         "props": Object {
           "children": "Find My Location",
           "onClick": [Function],
-          "to": "/locations",
+          "to": "/Rotten-Potatoes/locations",
         },
         "ref": null,
         "rendered": "Find My Location",
@@ -143,7 +143,7 @@ ShallowWrapper {
           </h3>,
           <NavLink
             onClick={[Function]}
-            to="/locations"
+            to="/Rotten-Potatoes/locations"
           >
             Find My Location
           </NavLink>,
@@ -208,7 +208,7 @@ ShallowWrapper {
           "props": Object {
             "children": "Find My Location",
             "onClick": [Function],
-            "to": "/locations",
+            "to": "/Rotten-Potatoes/locations",
           },
           "ref": null,
           "rendered": "Find My Location",

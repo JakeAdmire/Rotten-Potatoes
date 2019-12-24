@@ -79,7 +79,7 @@ export class Form extends Component {
   render() {
     const { value } = this.state;
     return this.state.redirect
-      ? <Redirect to="/locations" />
+      ? <Redirect to="/Rotten-Potatoes/locations" />
       : (
       <div className="Form">
         <h1>Rotten Potatoes</h1>
@@ -91,7 +91,7 @@ export class Form extends Component {
                 placeholder='ex. 123 Fake Address, Denver, CO'>
         </input>
         <h3>OR</h3>
-        <NavLink to="/locations" onClick={this.handleClick}>Find My Location</NavLink>
+        <NavLink to="/Rotten-Potatoes/locations" onClick={this.handleClick}>Find My Location</NavLink>
       </div>
     )
   }

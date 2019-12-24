@@ -35,8 +35,8 @@ export class App extends Component {
         <div style={backgroundStyle} className="background-image"></div>
         <div className="app-frame"></div>
         <div className="App-content">
-          <Route exact path="/" component={Form} />
-          <Route exact path="/locations" component={CardContainer} />
+          <Route exact path="/Rotten-Potatoes" component={Form} />
+          <Route exact path="/Rotten-Potatoes/locations" component={CardContainer} />
           <Route path='/locations/:id' render={({ match }) => {
             return <Info {...this.props.card} /> }} 
           />

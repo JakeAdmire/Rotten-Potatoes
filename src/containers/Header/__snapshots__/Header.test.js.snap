@@ -36,7 +36,7 @@ ShallowWrapper {
           </p>
           <p />
           <NavLink
-            to="/"
+            to="/Rotten-Potatoes"
           >
             change location..
           </NavLink>
@@ -81,7 +81,7 @@ ShallowWrapper {
             </p>,
             <p />,
             <NavLink
-              to="/"
+              to="/Rotten-Potatoes"
             >
               change location..
             </NavLink>,
@@ -118,7 +118,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": "change location..",
-              "to": "/",
+              "to": "/Rotten-Potatoes",
             },
             "ref": null,
             "rendered": "change location..",
@@ -152,7 +152,7 @@ ShallowWrapper {
             </p>
             <p />
             <NavLink
-              to="/"
+              to="/Rotten-Potatoes"
             >
               change location..
             </NavLink>
@@ -197,7 +197,7 @@ ShallowWrapper {
               </p>,
               <p />,
               <NavLink
-                to="/"
+                to="/Rotten-Potatoes"
               >
                 change location..
               </NavLink>,
@@ -234,7 +234,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": "change location..",
-                "to": "/",
+                "to": "/Rotten-Potatoes",
               },
               "ref": null,
               "rendered": "change location..",

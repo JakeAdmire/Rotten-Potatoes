@@ -39,7 +39,7 @@ ShallowWrapper {
         >
           <Link
             onClick={[Function]}
-            to="/locations/1"
+            to="/Rotten-Potatoes/locations/1"
           >
             Taco Bell
           </Link>
@@ -79,7 +79,7 @@ ShallowWrapper {
           "children": Array [
             <Link
               onClick={[Function]}
-              to="/locations/1"
+              to="/Rotten-Potatoes/locations/1"
             >
               Taco Bell
             </Link>,
@@ -101,7 +101,7 @@ ShallowWrapper {
             "props": Object {
               "children": "Taco Bell",
               "onClick": [Function],
-              "to": "/locations/1",
+              "to": "/Rotten-Potatoes/locations/1",
             },
             "ref": null,
             "rendered": "Taco Bell",
@@ -213,7 +213,7 @@ ShallowWrapper {
           >
             <Link
               onClick={[Function]}
-              to="/locations/1"
+              to="/Rotten-Potatoes/locations/1"
             >
               Taco Bell
             </Link>
@@ -253,7 +253,7 @@ ShallowWrapper {
             "children": Array [
               <Link
                 onClick={[Function]}
-                to="/locations/1"
+                to="/Rotten-Potatoes/locations/1"
               >
                 Taco Bell
               </Link>,
@@ -275,7 +275,7 @@ ShallowWrapper {
               "props": Object {
                 "children": "Taco Bell",
                 "onClick": [Function],
-                "to": "/locations/1",
+                "to": "/Rotten-Potatoes/locations/1",
               },
               "ref": null,
               "rendered": "Taco Bell",
