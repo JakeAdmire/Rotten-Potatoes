@@ -2,9 +2,6 @@
 
 <br />
 <p align="center">
-  <a href="https://github.com/JakeAdmire/Rotten-Potatoes">
-    <img src="https://user-images.githubusercontent.com/44077214/71378023-7a3d4280-2583-11ea-93c7-607842c622e2.png" alt="Logo" width="300" height="80">
-  </a>
   <h1 align="center">Rotten Potatoes</h1>
   <p align="center">
     Make sure the food is fresh & safe before you dig in!
