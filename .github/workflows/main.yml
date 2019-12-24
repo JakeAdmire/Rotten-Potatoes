@@ -21,7 +21,7 @@ jobs:
         npm run-script build
 
     - name: Deploy
-      uses: JakeAdmire/Rotten-Potatoes
+      uses: JakeAdmire/Rotten-Potatoes@releases/v3
       with:
         REACT_APP_GEOCODE_KEY: ${{ secrets.REACT_APP_GEOCODE_KEY }}
         BRANCH: master
