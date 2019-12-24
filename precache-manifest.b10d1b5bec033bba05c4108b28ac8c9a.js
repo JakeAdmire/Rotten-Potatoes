@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "07174e6ae8097b27d82b",
+    "revision": "804b2863da187dfb9885",
     "url": "/Rotten-Potatoes/static/css/main.4ab41baa.chunk.css"
   },
   {
-    "revision": "07174e6ae8097b27d82b",
-    "url": "/Rotten-Potatoes/static/js/main.605bf662.chunk.js"
+    "revision": "804b2863da187dfb9885",
+    "url": "/Rotten-Potatoes/static/js/main.4a71a3c6.chunk.js"
   },
   {
     "revision": "8ab2f61e0bdeb5df0443",
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/Rotten-Potatoes/static/media/background.a9a75cdd.jpg"
   },
   {
-    "revision": "1d532f15d582b6c95e659ee0d2c1676b",
+    "revision": "73159fe9c571722c7cc1843811266eeb",
     "url": "/Rotten-Potatoes/index.html"
   }
 ];

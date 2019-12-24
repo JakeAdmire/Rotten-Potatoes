@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Rotten-Potatoes/precache-manifest.85e57cbe093ed26a6dd38ef353b7f133.js"
+  "/Rotten-Potatoes/precache-manifest.b10d1b5bec033bba05c4108b28ac8c9a.js"
 );
 
 workbox.clientsClaim();
