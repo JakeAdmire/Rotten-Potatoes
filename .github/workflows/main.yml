@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v1
+
+    - name: Build
+      run: |
+        npm install
+        npm run-script build
+
+    - name: Deploy
+      uses: JakeAdmire/Rotten-Potatoes
+      with:
+        REACT_APP_GEOCODE_KEY: ${{ secrets.REACT_APP_GEOCODE_KEY }}
+        BRANCH: master
